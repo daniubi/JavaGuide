@@ -217,7 +217,7 @@ private:
 
 此时情况跟 T6 完全一样，由于已经生成了 `Read View`，此时依然沿用 **`m_ids` ：[101,102]** ，所以查询结果依然是 `name = 菜花`
 
-## MVCC➕Next-key-Lock 防止幻读
+## MVCC➕Next-key-Lock 防止幻读（意思是说innodb的RR隔离级别下不会发生幻读？）
 
 `InnoDB`存储引擎在 RR 级别下通过 `MVCC`和 `Next-key Lock` 来解决幻读问题：
 
